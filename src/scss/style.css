@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.solar-system-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 200px;
+}
+
+.solar-system {
+  width: 640px;
+  height: 640px;
+  display: flex;
+  border-radius: 50%;
+  position: relative;
+}
+
+.sun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: sun-light 15s linear infinite;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.sun img {
+  width: 40px;
+  height: 40px;
+  animation: rotate 35s linear infinite;
+}
+
+.ring-mercury {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  left: 268px;
+  top: 268px;
+  border: 2px solid rgba(98, 102, 104, 0.568627451);
+  position: absolute;
+  animation: rotate 5s linear infinite;
+  padding: 7px;
+}
+.ring-mercury img {
+  width: 15px;
+  height: 15px;
+}
+
+.ring-venus {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  left: 238px;
+  top: 238px;
+  border: 2px solid rgba(98, 102, 104, 0.568627451);
+  position: absolute;
+  animation: rotate 8s linear infinite;
+  padding: 16px;
+}
+.ring-venus img {
+  width: 15px;
+  height: 15px;
+}
+
+.ring-earth {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  left: 208px;
+  top: 208px;
+  border: 2px solid rgba(98, 102, 104, 0.568627451);
+  position: absolute;
+  animation: rotate 12s linear infinite;
+  padding: 24px;
+}
+.ring-earth img {
+  width: 15px;
+  height: 15px;
+}
+
+.earth {
+  position: relative;
+  border-radius: 50%;
+  width: -moz-min-content;
+  width: min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.moon-container {
+  position: absolute;
+  animation: rotate 2s linear infinite;
+  width: 30px;
+  height: 30px;
+  left: -8px;
+  top: -8px;
+  padding: 0;
+}
+.moon-container .moon {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgb(129, 129, 129);
+}
+
+.ring-mars {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  left: 178px;
+  top: 178px;
+  border: 2px solid rgba(98, 102, 104, 0.568627451);
+  position: absolute;
+  animation: rotate 20s linear infinite;
+  padding: 32px;
+}
+.ring-mars img {
+  width: 15px;
+  height: 15px;
+}
+
+.ring-jupiter {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  left: 147px;
+  top: 147px;
+  border: 2px solid rgba(98, 102, 104, 0.568627451);
+  position: absolute;
+  animation: rotate 30s linear infinite;
+  padding: 35px;
+}
+.ring-jupiter img {
+  width: 30px;
+  height: 30px;
+}
+
+.ring-saturn {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  left: 117px;
+  top: 117px;
+  border: 2px solid rgba(98, 102, 104, 0.568627451);
+  position: absolute;
+  animation: rotate 60s linear infinite;
+  padding: 42px;
+}
+.ring-saturn img {
+  width: 40px;
+  height: 20px;
+}
+
+.ring-uranus {
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  left: 87px;
+  top: 87px;
+  border: 2px solid rgba(98, 102, 104, 0.568627451);
+  position: absolute;
+  animation: rotate 70s linear infinite;
+  padding: 57px;
+}
+.ring-uranus img {
+  width: 18px;
+  height: 20px;
+}
+
+.ring-neptune {
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  left: 58px;
+  top: 58px;
+  border: 2px solid rgba(98, 102, 104, 0.568627451);
+  position: absolute;
+  animation: rotate 100s linear infinite;
+  padding: 66px;
+}
+.ring-neptune img {
+  width: 18px;
+  height: 18px;
+}
+
+.ring-pluto {
+  width: 580px;
+  height: 580px;
+  border-radius: 50%;
+  left: 27px;
+  top: 27px;
+  border: 2px solid rgba(98, 102, 104, 0.568627451);
+  position: absolute;
+  animation: rotate 120s linear infinite;
+  padding: 77px;
+}
+.ring-pluto img {
+  width: 12px;
+  height: 12px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes sun-light {
+  from {
+    box-shadow: 0 0 20px red;
+  }
+  to {
+    box-shadow: 0 0 35px orange;
+  }
+}/*# sourceMappingURL=style.css.map */
