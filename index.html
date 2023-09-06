@@ -16,17 +16,17 @@
     <div class="solar-system-wrapper">
         <div class="solar-system">
             <div class="sun">
-                <img src="./src/images/sun.png" alt="sun">
+                <img src="./src/images/sun.png" alt="sun" id="sun">
             </div>
             <div class="ring-mercury">
-                <img src="./src/images/mercury.png" alt="mercury">
+                <img src="./src/images/mercury.png" alt="mercury" id="mercury">
             </div>
             <div class="ring-venus">
-                <img src="./src/images/venus.png" alt="venus">
+                <img src="./src/images/venus.png" alt="venus" id="venus">
             </div>
             <div class="ring-earth">
                 <div class="earth">
-                    <img src="./src/images/earth.png" alt="earth">
+                    <img src="./src/images/earth.png" alt="earth" id="earth">
                     <div class="moon-container">
                         <div class="moon"></div>
                     </div>
@@ -34,28 +34,27 @@
                 </div>
             </div>
             <div class="ring-mars">
-                <img src="./src/images/mars.png" alt="mars">
+                <img src="./src/images/mars.png" alt="mars" id="mars">
             </div>
             <div class="ring-jupiter">
-                <img src="./src/images/jupiter.png" alt="jupiter">
+                <img src="./src/images/jupiter.png" alt="jupiter" id="jupiter">
 
             </div>
             <div class="ring-saturn">
-                <img src="./src/images/saturn.png" alt="saturn">
+                <img src="./src/images/saturn.png" alt="saturn" id="saturn">
             </div>
             <div class="ring-uranus">
-                <img src="./src/images/uranus.png" alt="uranus">
+                <img src="./src/images/uranus.png" alt="uranus" id="uranus">
             </div>
             <div class="ring-neptune">
-                <img src="./src/images/neptune.png" alt="neptune">
+                <img src="./src/images/neptune.png" alt="neptune" id="neptune">
             </div>
             <div class="ring-pluto">
-                <img src="./src/images/pluto.png" alt="pluto">
-
+                <img src="./src/images/pluto.png" alt="pluto" id="pluto">
             </div>
         </div>
         <div class="planet-description">
-            <div class="planet-container">
+            <div class="planet-container" id="sunInfo">
                 <p>Sun</p>
                 <img src="./src/images/button.png" alt="button">
                 <div class="dropdown-planet-info">
@@ -65,7 +64,7 @@
                         stars like our Sun scattered across the Milky Way galaxy.</p>
                 </div>
             </div>
-            <div class="planet-container">
+            <div class="planet-container" id="mercuryInfo">
                 <p>Mercury</p>
                 <img src="./src/images/button.png" alt="button">
                 <div class="dropdown-planet-info">
@@ -75,7 +74,7 @@
                         even exist in craters. Mercury's egg-shaped orbit takes it around the Sun every 88 days.</p>
                 </div>
             </div>
-            <div class="planet-container">
+            <div class="planet-container" id="venusInfo">
                 <p>Venus</p>
                 <img src="./src/images/button.png" alt="button">
                 <div class="dropdown-planet-info">
@@ -85,7 +84,7 @@
                         deformed mountains. Venus spins slowly in the opposite direction of most planets.</p>
                 </div>
             </div>
-            <div class="planet-container">
+            <div class="planet-container" id="earthInfo">
                 <p>Earth</p>
                 <img src="./src/images/button.png" alt="button">
                 <div class="dropdown-planet-info">
@@ -95,7 +94,7 @@
                         and lots of it.</p>
                 </div>
             </div>
-            <div class="planet-container">
+            <div class="planet-container" id="marsInfo">
                 <p>Mars</p>
                 <img src="./src/images/button.png" alt="button">
                 <div class="dropdown-planet-info">
@@ -108,7 +107,7 @@
                         system and holds many mysteries yet to be solved.</p>
                 </div>
             </div>
-            <div class="planet-container">
+            <div class="planet-container" id="jupiterInfo">
                 <p>Jupiter</p>
                 <img src="./src/images/button.png" alt="button">
                 <div class="dropdown-planet-info">
@@ -118,7 +117,7 @@
                         planet.</p>
                 </div>
             </div>
-            <div class="planet-container">
+            <div class="planet-container" id="saturnInfo">
                 <p>Saturn</p>
                 <img src="./src/images/button.png" alt="button">
                 <div class="dropdown-planet-info">
@@ -129,7 +128,7 @@
                         and gold bands visible in the atmosphere.</p>
                 </div>
             </div>
-            <div class="planet-container">
+            <div class="planet-container" id="uranusInfo">
                 <p>Uranus</p>
                 <img src="./src/images/button.png" alt="button">
                 <div class="dropdown-planet-info">
@@ -138,7 +137,7 @@
                         complete one orbit.</p>
                 </div>
             </div>
-            <div class="planet-container">
+            <div class="planet-container" id="neptuneInfo">
                 <p>Neptune</p>
                 <img src="./src/images/button.png" alt="button">
                 <div class="dropdown-planet-info">
@@ -148,7 +147,7 @@
                         Neptune's orbit for a 20-year period out of every 248 Earth years</p>
                 </div>
             </div>
-            <div class="planet-container">
+            <div class="planet-container" id="plutoInfo">
                 <p>Pluto</p>
                 <img src="./src/images/button.png" alt="button">
                 <div class="dropdown-planet-info wide-display">
@@ -161,5 +160,55 @@
         </div>
     </div>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        const sun = document.getElementById("sun"),
+            mercury = document.getElementById("mercury"),
+            venus = document.getElementById("venus"),
+            earth = document.getElementById("earth"),
+            mars = document.getElementById("mars"),
+            jupiter = document.getElementById("jupiter"),
+            saturn = document.getElementById("saturn"),
+            uranus = document.getElementById("uranus"),
+            neptune = document.getElementById("neptune"),
+            pluto = document.getElementById("pluto"),
+            sunInfo = document.getElementById("sunInfo"),
+            mercuryInfo = document.getElementById("mercuryInfo"),
+            venusInfo = document.getElementById("venusInfo"),
+            earthInfo = document.getElementById("earthInfo"),
+            marsInfo = document.getElementById("marsInfo"),
+            jupiterInfo = document.getElementById("jupiterInfo"),
+            saturnInfo = document.getElementById("saturnInfo"),
+            uranusInfo = document.getElementById("uranusInfo"),
+            neptuneInfo = document.getElementById("neptuneInfo"),
+            plutoInfo = document.getElementById("plutoInfo");
+
+        const shadowAdderAndRemover = (planet, planetInfo) => {
+            planetInfo.addEventListener("mouseenter", () => {
+                planet.style.filter = "drop-shadow(0 0 6px yellow)";
+                planet.style.transform = "scale(1.5)";
+
+
+            });
+            planetInfo.addEventListener("mouseleave", () => {
+                planet.style.filter = "drop-shadow(0 0 8px transparent)";
+                planet.style.transform = "scale(1)";
+
+            });
+        };
+
+        shadowAdderAndRemover(sun, sunInfo);
+        shadowAdderAndRemover(mercury, mercuryInfo);
+        shadowAdderAndRemover(venus, venusInfo);
+        shadowAdderAndRemover(earth, earthInfo);
+        shadowAdderAndRemover(mars, marsInfo);
+        shadowAdderAndRemover(jupiter, jupiterInfo);
+        shadowAdderAndRemover(saturn, saturnInfo);
+        shadowAdderAndRemover(uranus, uranusInfo);
+        shadowAdderAndRemover(pluto, plutoInfo);
+        shadowAdderAndRemover(neptune, neptuneInfo);
+    });
+
+</script>
 
 </html>
